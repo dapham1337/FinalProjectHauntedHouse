@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     Animator m_Animator;
     public GameObject flashlight;
-
+    public Image StaminaBar;
     public InputAction MoveAction;
 
     public float walkSpeed = 1.0f;
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             canSprint = currSprint < 0.5f ? false : true;
             currSprint += Time.deltaTime / 2;
         }
-        
+        StaminaBar.fillAmount = currSprint / sprintMax;
 
         m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * currentSpeed * Time.deltaTime);
     }
