@@ -16,7 +16,7 @@ public class Observer : MonoBehaviour
         }
         if (other.transform == player)
         {
-            //m_IsPlayerInRange = true;
+            m_IsPlayerInRange = true;
         }
     }
 
