@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         m_Rigidbody.MoveRotation(m_Rotation);
 
-        // speed go brrr MINOR CHANGE!!
+        // speed go brrr MINOR CHANGE ps this is where Dinh work next!!
         bool isSprinting = Keyboard.current.leftShiftKey.isPressed;
         float currentSpeed = isSprinting ? sprintSpeed : walkSpeed;
         
